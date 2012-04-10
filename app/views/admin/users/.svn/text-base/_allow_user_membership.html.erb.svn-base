@@ -1,0 +1,6 @@
+<span>&nbsp;</span><label style="min-width:135px;margin-top:10px;">Allow</label> <br/>
+<%#= hidden_field_tag "user[allowed_member_ids]",""%>
+<%= select_tag "user[allowed_member_ids][]", options_from_collection_for_select(@user.allowed_members, "id", "name",@user.allowed_member_ids), :multiple => true, :size => 10, :class=>"select_users", :style => "width:250px;margin-top:10px;" %>
+<%= link_to "Add Users", "JavaScript:void(0);",:id => "allow-add-list",:class => "bluebtn",:style => "float:none;" %>
+<%= link_to "Remove Users","JavaScript:void(0);",:id => "allow-remove-list",:class => "bluebtn",:style => "float:none;" %>
+

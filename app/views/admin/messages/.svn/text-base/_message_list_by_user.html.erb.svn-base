@@ -1,0 +1,15 @@
+			<div class="chat_started">
+  	            <div class="chat_initiate">
+						<!--chat initiated-->
+						  <% if @messages.count > 0 -%>
+							<ul>
+								<% @messages.each do |message| -%>
+									<li><%= render :partial => "message", :locals => {:message => message,:recepient_id => recepient_id,:recepient => recepient} %></li>
+								<% end %>
+							</ul>
+						  <% else %>
+						  	&nbsp;&nbsp;No messages found.			
+						  <% end %>	
+						<!--chat initiated close-->						
+						</div>
+			</div>

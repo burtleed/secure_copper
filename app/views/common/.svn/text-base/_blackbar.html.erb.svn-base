@@ -1,0 +1,12 @@
+<% if allow_search -%>
+<div class="blackbar">
+	<!---black bar-->
+		<span class="calibri_16_gray" style="margin:5px;">
+  		<label>Filter:</label>
+  		<input id="filter_search" type="text" title="Search" value="<%= search_text %>" name="filter_search", class="input189">
+  		<button type="submit" class="bluebtn" id="search">Search</button>
+      <button type="button" class="graybtn" id="clear">Clear</button> 
+		</span>
+ 	<!---black bar closed-->
+</div>
+<% end -%>

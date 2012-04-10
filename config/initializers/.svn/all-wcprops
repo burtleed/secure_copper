@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/securecopper/!svn/ver/238/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/securecopper/!svn/ver/1/config/initializers/inflections.rb
+END
+speedy_c2dm.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/securecopper/!svn/ver/187/config/initializers/speedy_c2dm.rb
+END
+devise.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/securecopper/!svn/ver/159/config/initializers/devise.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/securecopper/!svn/ver/8/config/initializers/session_store.rb
+END
+config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/securecopper/!svn/ver/207/config/initializers/config.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/1/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/securecopper/!svn/ver/1/config/initializers/backtrace_silencers.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/238/config/initializers/mime_types.rb
+END

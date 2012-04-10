@@ -1,0 +1,21 @@
+									<div class="talkbblmain">
+										<div class="<%=(message.sender_id == current_user.id)? "tbinkmain" : "tbbluemain"%>">
+										<!--blue talk bubble-->
+										<span>
+											<b><%=(message.sender_id == current_user.id)? "me: " : "#{message.sender_first_name}: " %></b><%= simple_format(message.body) %><br>
+											<p class="calibri13ltgray">
+												<div style="float:left;width:200px;">
+													<%= message.created_at.strftime("%d-%B-%Y %H:%m")%>
+												</div>
+												<div style="float:right;width:160px;word-wrap:break-word;">
+											   	 <%= link_to 'Delete', admin_message_url(message.id), :method => :delete , :remote => true , :confirm => "Are you sure to delete this message?" %>
+											   	 <% if message.attachment_present? %>
+											   	   |   
+												     <%= link_to 'Attachments', admin_show_attachments_path(message.id),:remote => true  %>
+												   <% end %>	
+												</div>
+											</p>
+										</span>
+										<!--blue talk bubble close-->											
+										</div>
+									</div>

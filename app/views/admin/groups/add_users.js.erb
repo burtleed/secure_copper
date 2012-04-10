@@ -1,0 +1,3 @@
+//$('#gp_mem').html("<%#=escape_javascript render :partial => "group_members", :locals => {:selected_users => @cids,:users => @users }%>")
+$('#selectorOne').html("<%=escape_javascript render :inline => render_myoptions(@users1) %>")
+$('#selectorTwo').html("<%=escape_javascript render :inline => render_myoptions(@users2) %>")

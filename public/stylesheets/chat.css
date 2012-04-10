@@ -1,0 +1,471 @@
+.chatout{
+float:left;
+width:928px;
+padding:0px 0px 0px 0px;
+border:1px solid #cccccc;
+background:#dfdfdf url(../images/chatbox_x.jpg) repeat-x 0px 0px;
+}
+.chatleft{
+float:left;
+width:273px;
+border-right:1px solid #cccccc;
+}
+.chatright{
+float:left;
+width:654px;
+}
+.ct_search{
+float:left;
+width:253px;
+height:40px;
+padding:11px 10px 0px 10px;
+background:transparent url(../images/search_bg_chat.jpg) repeat-x 0px 0px;
+border-bottom:1px solid #bebebe;
+	}
+.dvinptsearch{
+float:left;
+width:253px;
+height:29px;
+background:transparent url(../images/input_search.jpg) no-repeat 0px 0px;	
+	}
+.inputsearch{
+float:left;
+width:216px;
+height:29px;
+background:transparent;
+font-family:Calibri, Arial, Tahoma;
+font-size:14px;
+color:#555555;
+border:none;
+padding:0px 27px 0px 10px;
+	}
+.ct_btnholder{
+float:left;
+width:273px;
+height:16px;
+}
+a.slidbtn_up{
+float:left;
+width:273px;
+height:16px;
+text-decoration:none;
+background:transparent url(../images/arrows.jpg) no-repeat 0px 0px;
+}
+a:hover.slidbtn_up{
+float:left;
+width:273px;
+height:16px;
+text-decoration:none;
+background:transparent url(../images/arrows.jpg) no-repeat 0px -16px;
+}
+a.slidbtn_down{
+float:left;
+width:273px;
+height:16px;
+text-decoration:none;
+background:transparent url(../images/arrows.jpg) no-repeat 0px -48px;
+}
+a:hover.slidbtn_down{
+float:left;
+width:273px;
+height:16px;
+text-decoration:none;
+background:transparent url(../images/arrows.jpg) no-repeat 0px -32px;
+}
+.ct_contacts{
+float:left;
+width:273px;
+height:300px;
+padding:0px 0px 0px 0px;
+overflow:auto;
+background-color:#000;
+	}
+.ct_contacts ul{
+float:left;
+width:450px;
+}
+.ct_contacts ul li{
+float:left;
+width:273px;
+height:60px;
+background:transparent url(../images/libg_ct.jpg) no-repeat 0px 0px;
+}
+.ct_contacts ul li.activechat{
+float:left;
+width:273px;
+height:60px;
+background:transparent url(../images/active_ct.png) no-repeat 0px 0px;
+}
+.ctimg{
+float:left;
+width:49px;
+height:50px;
+padding:5px;	
+	}
+.ctimg a{
+float:left;
+width:43px;
+height:43px;
+background-color:#FFF;
+border:1px solid #cccccc;
+padding:2px;	
+	}
+.cttxt{
+float:left;
+width:214px;
+height:50px;
+line-height:25px;
+padding:5px 0px 5px 0px;	
+	}
+.calibri13darkgray{
+font-family:Calibri, Arial, Tahoma;
+font-size:13px;
+color:#555555;	
+text-decoration:none;
+	}
+.calibri13ltgray{
+font-family:Calibri, Arial, Tahoma;
+font-size:13px;
+color:#909090;	
+text-decoration:none;
+	}
+.chatright{
+float:left;
+width:654px;
+}
+.chat_notstarted{
+float:left;
+width:654px;
+height:381px;/*263px;*/	
+background:transparent url(../images/get_started.png) no-repeat 0px 0px;
+	}
+.chatbar{
+float:left;
+width:644px;
+height:115px;
+background:transparent url(../images/chatbar.png) repeat-x 0px 0px;
+padding:6px 5px 0px 5px;	
+	}
+.dvchtbox{
+float:left;
+width:529px;
+height:110px;
+background:transparent url(../images/input_chat.png) no-repeat 0px 0px;
+}
+.inputchtbox{
+float:left;
+width:509px;
+height:90px;
+background:transparent;
+border:none;
+font-family:Calibri, Arial, Tahoma;
+font-size:14px;
+color:#555555;
+overflow:auto;
+padding:10px;
+}
+.chtbtns{
+float:left;
+width:110px;
+height:110px;
+padding:0px 0px 0px 5px;	
+	}
+a.btnsend{
+float:left;
+width:110px;
+height:71px;
+background:transparent url(../images/btn_send.png) no-repeat 0px 0px;
+text-decoration:none;	
+margin-bottom:5px;
+	}
+a:hover.btnsend{
+float:left;
+width:110px;
+height:71px;
+background:transparent url(../images/btn_send.png) no-repeat 0px -71px;
+text-decoration:none;	
+margin-bottom:5px;
+	}	
+a.btnattach{
+float:left;
+width:110px;
+height:33px;
+background:transparent url(../images/btn_attach.png) no-repeat 0px 0px;
+text-decoration:none;	
+	}
+a:hover.btnattach{
+float:left;
+width:110px;
+height:33px;
+background:transparent url(../images/btn_attach.png) no-repeat 0px -33px;
+text-decoration:none;	
+	}	
+.chat_started{
+float:left;
+width:654px;
+height:381px;/*263px;*/	
+}
+.chat_initiate{
+float:left;
+width:654px;
+height:362px;/*243px;*/
+overflow:auto;
+padding:10px 0px 10px 0px;
+}
+.chat_initiate ul{
+float:left;
+width:636px;
+}
+.chat_initiate ul li{
+float:left;
+width:636px;
+}
+.photochat{
+float:left;
+width:59px;
+padding:0px 16px 0px 17px;	
+	}
+.chatscrollbar{
+float:left;
+width:17px;
+height:263px;
+background:transparent url(../images/scrollbar_bg.png) repeat-y 0px 0px;
+padding:0px 0px 0px 1px;	
+	}
+.talkbblmain{
+float:left;
+width:544px;
+	}
+.tbbluemain{
+float:left;
+width:544px;
+background:transparent url(../images/tb_blue_curve.png) no-repeat 0px bottom;	
+padding-bottom:10px;
+	}
+.tbbluemain span{
+float:left;
+width:514px;
+padding:10px 10px 10px 20px;
+min-height:25px;
+background:transparent url(../images/tb_blue_main.png) no-repeat 0px 0px;	
+padding-bottom:10px;
+font-size:16px;
+color:#000;
+}
+.tbwhitemain{
+float:left;
+width:544px;
+background:transparent url(../images/tb_white_curve.png) no-repeat 0px bottom;	
+padding-bottom:10px;
+	}
+.tbwhitemain span{
+float:left;
+width:514px;
+padding:10px 20px 10px 10px;
+min-height:25px;
+background:transparent url(../images/tb_white_main.png) no-repeat 0px 0px;	
+padding-bottom:10px;
+font-size:16px;
+color:#000;
+}
+.tbinkmain{
+float:left;
+width:544px;
+background:transparent url(../images/tb_ink_curve.png) no-repeat 0px bottom;	
+padding-bottom:10px;
+	}
+.tbinkmain span{
+float:left;
+width:514px;
+padding:10px 20px 10px 10px;
+min-height:25px;
+background:transparent url(../images/tb_ink_main.png) no-repeat 0px 0px;	
+padding-bottom:10px;
+font-size:16px;
+color:#000;
+}
+a.chtscbtnup{
+float:left;
+width:17px;
+height:17px;
+background:transparent url(../images/scrollbars.png) no-repeat 0px 0px;	
+text-decoration:none;
+}
+a:hover.chtscbtnup{
+float:left;
+width:17px;
+height:17px;
+background:transparent url(../images/scrollbars.png) no-repeat -17px 0px;	
+text-decoration:none;
+}
+a.chtscbtndn{
+float:left;
+width:17px;
+height:17px;
+background:transparent url(../images/scrollbars.png) no-repeat 0px -17px;	
+text-decoration:none;
+margin-top:229px;
+}
+a:hover.chtscbtndn{
+float:left;
+width:17px;
+height:17px;
+background:transparent url(../images/scrollbars.png) no-repeat -17px -17px;	
+text-decoration:none;
+margin-top:229px;
+}
+
+/* Container DIV - automatically generated */
+.simply-scroll-container { 
+	position: relative;
+}
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip { 
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+	
+.simply-scroll-list li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+	
+.simply-scroll-list li img {
+	border: none;
+	display: block;
+}
+
+/* Master button styles - note that left and right 
+versions are included although they are not used in this example */
+
+.simply-scroll-btn {
+	position: absolute;
+	background-image: url(../images/buttons.png);
+	width: 42px;
+	height: 44px;
+	z-index:3;
+	cursor: pointer;
+}
+	
+.simply-scroll-btn-left {
+	left: 6px;
+	bottom: 6px;
+	background-position: 0 -44px;
+}
+.simply-scroll-btn-left.disabled {
+	background-position: 0 0 !important;
+}
+.simply-scroll-btn-left:hover {
+	background-position: 0 -88px;
+}
+	
+.simply-scroll-btn-right {
+	right: 6px;
+	bottom: 6px;
+	background-position: 84px -44px;
+}
+.simply-scroll-btn-right.disabled {
+	background-position: 84px 0 !important;
+}
+.simply-scroll-btn-right:hover {
+	background-position: 84px -88px;
+}
+	
+.simply-scroll-btn-up {
+	float:left;
+	width:273px;
+	height:16px;
+	text-decoration:none;
+	background:transparent url(../images/arrows.jpg) no-repeat 0px 0px;
+}
+.simply-scroll-btn-up.disabled {
+	float:left;
+	width:273px;
+	height:16px;
+	text-decoration:none;
+	background:transparent url(../images/arrows.jpg) no-repeat 0px 0px;
+}
+.simply-scroll-btn-up:hover {
+	float:left;
+	width:273px;
+	height:16px;
+	text-decoration:none;
+	background:transparent url(../images/arrows.jpg) no-repeat 0px -16px;
+}
+	
+.simply-scroll-btn-down {
+	float:left;
+	width:273px;
+	height:16px;
+	text-decoration:none;
+	background:transparent url(../images/arrows.jpg) no-repeat 0px -48px;
+}
+.simply-scroll-btn-down.disabled {
+	float:left;
+	width:273px;
+	height:16px;
+	text-decoration:none;
+	background:transparent url(../images/arrows.jpg) no-repeat 0px -48px;
+}
+.simply-scroll-btn-down:hover {
+	float:left;
+	width:273px;
+	height:16px;
+	text-decoration:none;
+	background:transparent url(../images/arrows.jpg) no-repeat 0px -32px;
+}
+
+/* Custom class modifications - adds to / overrides above
+
+Vertical scroller example, with custom base class */
+
+/* Container DIV */
+.vert { 
+	float:left;
+	width: 273px;
+	height: 450px;
+	padding:0px 0px 0px 0px;
+	overflow: hidden;
+}
+
+/* Clip DIV */
+.vert .simply-scroll-clip {
+	width: 274px;
+	height: 418px;
+	margin-top:16px;
+}
+
+/* Explicitly set height/width of each list item */
+.vert .simply-scroll-list li {
+	float:left;
+   width:273px;
+   height:60px;
+   background:transparent url(../images/libg_ct.jpg) no-repeat 0px 0px;
+}
+
+/* Modified button positions, overriding previous styles */
+.vert .simply-scroll-btn-up { 
+	right: 0;
+	top: 0;
+}
+
+.vert .simply-scroll-btn-down { 
+	right: 0;
+	top: 435px;
+}

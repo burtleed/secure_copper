@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/securecopper/!svn/ver/1/app/views/users/mailer
+END
+reset_password_instructions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/securecopper/!svn/ver/1/app/views/users/mailer/reset_password_instructions.html.erb
+END
+confirmation_instructions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/securecopper/!svn/ver/1/app/views/users/mailer/confirmation_instructions.html.erb
+END
+unlock_instructions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/securecopper/!svn/ver/1/app/views/users/mailer/unlock_instructions.html.erb
+END

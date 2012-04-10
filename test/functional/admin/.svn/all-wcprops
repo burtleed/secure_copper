@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/securecopper/!svn/ver/50/test/functional/admin
+END
+users_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/securecopper/!svn/ver/1/test/functional/admin/users_controller_test.rb
+END
+roles_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/securecopper/!svn/ver/1/test/functional/admin/roles_controller_test.rb
+END
+titles_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/50/test/functional/admin/titles_controller_test.rb
+END

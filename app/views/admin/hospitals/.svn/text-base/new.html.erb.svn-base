@@ -1,0 +1,5 @@
+<%= render :partial=>"/common/new_toolbar", 
+  :locals=>{ 
+    :title=>"Hospital Manager: New Hospital", :icon_class=>"icon-48-hospital", :model_name=>"admin_hospital"
+  } %>
+<%= render 'form' %>

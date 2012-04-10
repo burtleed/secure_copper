@@ -1,0 +1,29 @@
+<div class="contentsbar">
+  	<!--content bar-->
+	<%= form_for :user, :url => set_recepients_admin_messages_url  , :remote => true do |f| %>
+  	<table class="tablegray">
+  	  <thead>
+  			<tr>
+  		    <th width="1%"><%= check_box_tag "checkall-toggle", "", false, :title=>"Check All" %></th>
+  				<th class="left" width="10%">Name</th>
+  				<th class="nowrap" width="10%">User Groups</th>
+  				<th class="nowrap" width="15%">Role</th>
+  				<th class="nowrap" width="15%">Email</th>
+  			</tr>
+  	  </thead>
+  	  <tbody>
+		<% @users_list.each do |user| -%>
+		<tr>
+			<td class="center"><%= check_box_tag "cb#{user.id}", user.id, false, :title=>"Checkbox for #{user.name}", :name=>"cid[]" %></td>
+			<td><%= user.name %><%= ", " + user.title.name unless user.title.nil? %></td>
+			<td class="center"><%= user.primary_user_group.name unless user.primary_user_group.nil? %></td>
+			<td class="center"><%= user.role.role_name unless user.role.nil? %></td>
+			<td class="center"><%= user.email %></td>
+		</tr>			
+	<% end -%>
+	<tr>
+		<td colspan=5 align="right"><button type="submit" class="bluebtn" id="user_submit">Select Users</button></td>
+	</tr>
+	</tbody>	
+	</table>
+<% end %>

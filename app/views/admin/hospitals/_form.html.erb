@@ -1,0 +1,37 @@
+<%= form_for(@admin_hospital) do |f| %>
+<% if @admin_hospital.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@admin_hospital.errors.count, "error") %> prohibited this new information from being saved:</h2>
+
+    <ul>
+    <% @admin_hospital.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div id="element-box">
+  <div class="m">
+    <div class="fltlft">
+      <div class="field">
+        <span class="star">*</span><%= f.label :name %>
+        <%= f.text_field :name, :class=>"input_text" %>
+      </div>
+      <div class="field">
+        <span class="star">&nbsp;</span><%= f.label :address %>
+        <%= f.text_area :address,:class=>"input_text_area" %>
+      </div>
+      <% if current_user.is_super_admin? %>
+	      <div class="field">
+	        <span class="star">*</span><%= f.label :user_limit %>
+	        <%= f.text_field :user_limit, :class=>"input_text" %>
+	      </div>
+      <% end %>
+      <div class="actions hidden">
+        <%= hidden_field_tag "save_method", "", :value=>"apply" %>
+        <%= f.submit %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

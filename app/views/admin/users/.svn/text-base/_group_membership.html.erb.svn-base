@@ -1,0 +1,11 @@
+        <span class="star">*</span><%= label_tag "user[group_ids][]", "Group Membership" %>
+        <%= check_box_tag "user[group_ids][]", "", false, :id=>"user_group_ids_all" %>
+        <%= label_tag :check_all, "Check All", :style=>"float:none;display:inline;width:200px;padding-top:0px;" %>
+        <div style="float:left;width:750px;margin-top:10px;">
+          <% Admin::Group.group_list(hospital_id).each do |group| %>
+          <div style="float:left;width:200px;margin-right:100px;">
+            <%= check_box_tag "user[group_ids][]", group.id, (@user.nil?)?(false):(@user.group_ids.include?(group.id)), :id=>"user_group_ids_#{group.id}" %>
+            <%= label_tag group.name, group.name, :style=>"float:none;display:inline;width:200px;padding-top:0px;" %>
+          </div>
+          <% end -%>
+        </div>

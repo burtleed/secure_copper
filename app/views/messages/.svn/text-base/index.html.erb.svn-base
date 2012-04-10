@@ -1,0 +1,9 @@
+<%= form_tag delete_selected_messages_path(:method => :post) do %>
+	<% if params[:mailbox] == "sent" %>
+			<%= render :partial => "sent" %>
+	<% elsif params[:mailbox] == "readed" %>
+			<%= render :partial => "readed" %>
+	<% else %>
+			<%= render :partial => "inbox" %>
+		<% end %>
+<% end %>

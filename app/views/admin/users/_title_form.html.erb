@@ -1,0 +1,2 @@
+        <span class="star">*</span><%= label_tag :user_title_id, "Title" %>
+        <%= collection_select :user, :title_id, (hospital_id.blank?)?(Admin::Title.all):(Admin::Title.title_list(hospital_id)),:id,:name,{:prompt => true}, {:class=>"select_text", :disabled=>disabled} %>

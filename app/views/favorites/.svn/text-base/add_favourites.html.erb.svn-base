@@ -1,0 +1,4 @@
+<h1> Add favorites</h1>
+<% for group in Admin::Group.all%>
+  <% checkbox_tag %>
+<% end%>

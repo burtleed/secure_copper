@@ -1,0 +1,29 @@
+var el = $('#new-message-form');
+
+<% if @message.errors.any? %>
+
+  // Create a list of errors
+  var errors = $('<ul />');
+
+  <% @message.errors.full_messages.each do |error| %>
+    errors.append('<li><%= escape_javascript( error ) %></li>');
+  <% end %>
+
+  // Display errors on form
+  el.find('.errors').html(errors);
+
+<% else %>
+
+
+  /*if($('.chat_initiate ul').length == 0){
+    	$('.chat_initiate').html("<ul></ul>")
+    }
+    $('.chat_initiate ul').append("<li><%#= escape_javascript(render :partial => 'message', :locals => {:message => @message,:recepient_id => @recepient_id,:recepient => @recepient}) %></li>");
+    $('.chat_initiate').scrollTop($('.chat_initiate')[0].scrollHeight); */
+
+    refresh_chat_page();
+	  el.find('input:text,textarea').val('');
+
+<% end %>
+
+$('#attachment_count').html("0");

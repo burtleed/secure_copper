@@ -1,0 +1,81 @@
+<%#= javascript_include_tag "uploadify/swfobject","uploadify/jquery.uploadify.v2.1.4.js" %>
+<%- session_key_name = Rails.application.config.session_options[:key] -%>
+<style type="text/css">
+* {margin:0px auto; padding:0;}
+</style>
+<!--<div style="position:absolute;position:relative\9;margin-left:285px;margin-top:678px;">-->
+<div id="attachment_select" style="position:absolute;clear:both;position:relative\8;margin-left:200px;margin-top:10px;">
+  <%= form_for TempFileUpload.new, :html => { :multipart => true,:id=>'new_temp_file_uplaod',:action=>'create',:method => 'post' } do |f| %>
+    <%= f.hidden_field :keyname, :value => "#{session[:session_id]}" %>
+    <div class="fileInputsforupload">
+      <%= f.file_field :data,  :class => 'file' -%>
+    <span id="loader" ><img src="/LoadingPanel.JS/LoadingIndicators/Loading_00.gif" alt="Loading..." /></span>
+    </div>
+  <% end %>
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+  jQuery(document).ready(function() {
+    jQuery('#temp_file_upload_data').click(function(event){
+    event.preventDefault();
+  });
+  jQuery('#temp_file_upload_data').uploadify({
+      'uploader'            : '/javascripts/uploadify/uploadify.swf',
+      'script'              : '/temp_file_uploads',
+      'multi'               : true,
+      'auto'                :true,
+      'queueID'             : 'custom-queue',
+      'cancelImg'           : '/images/cancel.png', 
+      'folder'              : '/system/temp_files',
+      'queueSizeLimit'      : 10,
+      'simUploadLimit'      : 10,
+      'onError'             :function (event,ID,fileObj,errorObj) {
+							    		  alert(errorObj.type + ' Error: ' + errorObj.info);
+								     },
+      'onInit'              : function(){jQuery('#loader').hide();},
+      'sizeLimit'           : 900000000000,
+      'scriptData'          : {'<%= session_key_name %>' : encodeURIComponent('<%= u cookies[session_key_name] %>'),
+      'user_id'              : '<%= current_user.id %>',
+      'keyname'              : '<%= session[:session_id]%>',
+      'authenticity_token'  : encodeURIComponent('<%= u form_authenticity_token if protect_against_forgery? %>')
+         },
+      'onProgress': function() {showdiv(); }, 
+      'onSelect': function(event, queueID, fileObj, reposnse, data) {
+        jQuery('#temp_file_upload_data').uploadifyUpload();},
+      'onSelectOnce': function(event, queueID, fileObj, reposnse, data) {
+        jQuery('#temp_file_upload_data').uploadifyUpload();},
+      'onCancel' : function(event, queueID, fileObj, reposnse, data) {
+        jQuery.ajax({
+        type: 'POST',
+        url: '/temp_file_uploads/destroy/'+queueID,
+         });
+        jQuery('#temp_file_upload_data').uploadifyUpload();
+       },
+      'onComplete': function(event, queueID, fileObj, reponse, data) {
+        jQuery("#uploadify_submit").ajaxSubmit({
+        type: 'POST',
+        dataType: 'xml',  // Tried to use json, but it's madness.  Don't do it.
+        timeout: 10000,
+        success: function(xml) {
+        var response = jQuery(xml).find('response').first();
+        if( jQuery(response).attr('msg') == 'success' ) {
+        alert("Success");
+        } else {
+          alert('Error');
+        }
+        },
+        error: function() {
+          alert('ERROR!');
+        }
+        });
+        },
+      'onAllComplete'  : function(event,data) {
+        jQuery.get('/temp_file_uploads', function(data) {
+          jQuery('#save-queue').html(data);
+        });
+        hidediv(); 
+        }
+      });
+  });
+</script>

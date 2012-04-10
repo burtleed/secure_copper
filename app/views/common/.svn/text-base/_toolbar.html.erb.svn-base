@@ -1,0 +1,41 @@
+			<nav id="topnavi">
+      	<ul>
+      	  <% if allow_new -%>
+      		<li><a href="<%= eval("new_#{model_name}_path") %>" class="topnew"><span>New</span></a>
+      		</li>	
+      		<% end -%>
+      		<% if allow_edit -%>
+      		<li><a href="#" class="topedit" id="edit_form"><span>Edit</span></a></li>
+      		<% end -%>
+      		<% if allow_activate -%>
+      		<li><a href="#" class="topactivate"><span>Activate</span></a></li>
+      		<% end -%>
+      		<% if allow_block -%>
+      		<li><a href="#" class="topblock"><span>Block</span></a></li>
+      		<% end -%>
+      		<% if allow_delete -%>
+      		<li><a href="#" class="topdelete" id="delete_form"><span>Delete</span></a></li>
+      		<% end -%>
+      		<% if allow_save -%>
+      		<li><a href="#" class="topsave" id="save_form"><span>Save</span></a></li>
+      		<% end -%>
+      		<% if allow_save_new -%>
+      		<li><a href="#" class="topsavenew" id="save_new"><span>Save & New</span></a></li>
+      		<% end -%>
+      		<% if allow_send -%>
+      		<li><a href="#" class="topsend" id="save_form"><span>Send</span></a></li>
+      		<% end -%>
+      		<% if allow_cancel -%>
+      		<li><a href="<%= eval("#{model_name}s_path") %>" class="topcancel"><span>Cancel</span></a></li>
+      		<% end -%>
+      		<% if allow_close -%>
+      		<li><a href="<%= eval("#{model_name}s_path") %>" class="topdelete"><span>Close</span></a></li>
+      		<% end -%>
+      		<% if allow_sendmessage -%>
+      		<li><a href="<%= eval("new_#{model_name}_path") %>" class="topsendmessage"><span>Send</span></a></li>
+      		<% end -%>
+      		<% if allow_settings -%>
+      		<li><a href="<%=new_admin_expire_settings_message_path%>" class="topsetting" id="setting_form"><span>Settings</span></a></li>
+      		<% end -%>
+      	</ul>
+			</nav>

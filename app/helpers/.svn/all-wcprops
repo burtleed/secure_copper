@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/securecopper/!svn/ver/165/app/helpers
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/165/app/helpers/application_helper.rb
+END
+session_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/securecopper/!svn/ver/1/app/helpers/session_helper.rb
+END
+home_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/securecopper/!svn/ver/1/app/helpers/home_helper.rb
+END

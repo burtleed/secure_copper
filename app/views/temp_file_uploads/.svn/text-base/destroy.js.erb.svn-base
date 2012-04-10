@@ -1,0 +1,1 @@
+$('#save-queue').html("<%= escape_javascript(render :partial =>'/admin/messages/temp_files',:layout=>false)%>").load();

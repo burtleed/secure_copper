@@ -1,0 +1,13 @@
+<table width="500px;" cellpadding=5 cellspacing=5 style="float:left">
+<% @attachments.in_groups_of(2, false) do |row_attachment| -%>
+   <tr style="float:left">
+	<% row_attachment.each do |attachment| %>
+	   <% if attachment.image? %> 
+		  <td width="320px"><%= image_tag attachment.data.url, :size => '200x200' %></td>
+		 <% else %>
+		  <td width="320px"><%= link_to "#{attachment.data_file_name}", admin_download_attachment_path(attachment.id) %></td>  
+		 <% end %> 
+   <% end %>
+   </tr> 
+<% end -%>
+</table>

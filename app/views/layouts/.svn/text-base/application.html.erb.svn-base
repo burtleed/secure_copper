@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Secure Copper</title>
+		<!--[if IE]>
+	  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--main css-->
+    <%= stylesheet_link_tag "base_packaged" %>
+		<%= javascript_include_tag "base_packaged" %>
+		<%#= stylesheet_link_tag "secure_copper_main.css","chat" %>
+    <%#= stylesheet_link_tag "uploadify","token-input-facebook" ,"jquery-ui-1.8.16.custom","jquery.fancybox-1.3.4","colorbox" %>
+    <%#= javascript_include_tag "jquery","jquery_ujs","jquery-ui-1.8.16.custom.min","uploadify/swfobject", "uploadify/jquery.uploadify.v2.1.4.min", "jquery.tokeninput", "application","group","jquery.moverbox","jquery.fancybox-1.3.4.pack","jquery.colorbox","jquery.mousewheel-3.0.4.pack","build_delay","jquery.simplyscroll" %>
+    <%= csrf_meta_tag %>
+    <%= yield :scripts %>
+	</head>
+<body>
+	<section id="main">
+	<!--main-->
+		<header id="header">
+		<!--header-->
+			<div id="logomain">
+			<!--logo-->
+				<%= link_to image_tag("/images/logo.png",:size => "329x101",:alt => "Logo"),"#" %>
+			<!--logo close-->
+			</div>
+			<div class="login_user">
+			  <% if current_user.present? %>
+            Welcome, <%= current_user.name %> 			    
+			  <% end %>
+			</div>
+		<!--header close-->		
+		</header>
+		<nav id="mainnav">
+		<!--main navigation / tabs-->
+			<ul>
+			   <% if current_user.nil? %>
+					<li><a href="<%=new_user_session_path%>" class="activemain"><span>Login</span></a></li>			   
+			   <% else %>
+		      <li><a href="<%=admin_messages_path%>" class="<%= show_active_menu_controller("messages") %>"><span>Messages</span></a></li>
+					<% if current_user.is_any_admin? %>
+						<li><a href="<%=admin_users_path%>" class="<%= show_active_menu_controller("users") %>"><span>User Manager</span></a></li>
+						<li><a href="<%=admin_groups_path%>" class="<%= show_active_menu_controller("groups") %>"><span>Group Manager</span></a></li>
+						<li><a href="<%=admin_hospitals_path%>" class="<%= show_active_menu_controller("hospitals") %>"><span>Hospitals</span></a></li>
+						<li><a href="<%=admin_titles_path%>" class="<%= show_active_menu_controller("titles") %>"><span>Titles</span></a></li>
+					<% end %>
+						<li><a href="<%=change_password_admin_users_path%>" class="<%= show_active_menu(change_password_admin_users_path) %>"><span>Change Password</span></a></li>
+						<li><a href="<%=destroy_user_session_path%>"><span>Logout</span></a></li> 
+				 <% end %>		
+			</ul>
+		<!--main navigation / tabs close-->
+		</nav>
+		<section id="contents_main">
+		<% flash.each do |key,value| %>
+		 <div id="flash" class="flash_<%= key %>" >
+     		 <div class="message"><%= value %></div>
+ 		</div>
+		<% end -%>
+		<% flash.clear() %>
+		<!--page contents-->
+			<%= yield %>
+		<!--page contents close-->		
+		</section>
+		<footer id="footer" class="arial_11_gray">
+		<!--footer-->
+			<div class="dv_fl">
+				Copyright &copy; 2011 Secure Copper | All rights reserved | <a class="arial_11_gray" href="#">Privacy Policy </a>
+			</div>
+			<div class="dv_fr">
+				<a class="arial_11_gray" href="#">About</a>  | <a class="arial_11_gray" href="#">Contact</a> | <a class="arial_11_gray" href="#">Support</a>
+			</div>
+		<!--footer close-->		
+		</footer>
+	<!--main close-->	
+	</section>
+</body>
+</html>

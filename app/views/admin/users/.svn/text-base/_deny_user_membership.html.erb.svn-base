@@ -1,0 +1,4 @@
+<span>&nbsp;</span><label style="min-width:135px;margin-top:10px;">Deny</label> <br/>
+<%= select_tag "user[deny_member_ids][]", options_from_collection_for_select(@user.deny_members, "id", "name",@user.deny_member_ids), :multiple => true, :size => 10, :class=>"select_users", :style => "width:250px;margin-top:10px;" %>
+<%= link_to "Add Users", "JavaScript:void(0);",:id => "deny-add-list", :remote => true,:class => "bluebtn",:style => "float:none;" %>
+<%= link_to "Remove Users","JavaScript:void(0);",:id => "deny-remove-list", :remote => true,:class => "bluebtn",:style => "float:none;" %>

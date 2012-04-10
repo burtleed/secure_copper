@@ -1,0 +1,3 @@
+        	                  <td rowspan="2" style="border:0px solid white;">
+        	                    <%= message.created_at.strftime("%d-%B-%Y %H:%m")%>
+        	                  </td>

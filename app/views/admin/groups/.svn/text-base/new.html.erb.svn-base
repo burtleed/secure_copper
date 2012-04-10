@@ -1,0 +1,5 @@
+<%= render :partial=>"/common/new_toolbar", 
+  :locals=>{ 
+    :title=>"Group Manager: New Group", :icon_class=>"icon-48-group", :model_name=>"admin_group"
+  } %>
+<%= render 'form' %>

@@ -1,0 +1,61 @@
+<%= content_for :scripts do%>
+  <script>
+      $(document).ready(function () {
+            var dataLeft = [<%= @users1 %>];
+           
+            var dataRight = [<%=@users2 %>];
+            
+            $('#gp_mem').MoverBoxes({ 'dataleft': dataLeft, 'dataright': dataRight, size: 20,'leftLabel':"Unassigned", 'rightLabel':"Assigned" });
+
+        });
+	</script>
+
+<% end %>
+<%= form_for(@admin_group, :html => {:autocomplete => :off} ) do |f| %>
+<% if @admin_group.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@admin_group.errors.count, "error") %> prohibited this new information from being saved:</h2>
+
+    <ul>
+    <% @admin_group.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div id="element-box">
+  <div class="m">
+    <div class="fltlft">
+      <div class="field">
+        <span class="star">*</span><%= f.label :name %>
+        <%= f.text_field :name, :class=>"input_text" %>
+      </div>
+      <% if current_user.is_super_admin? %>
+    	<div class="field">
+  		    <span class="star">*</span><%= f.label :hospital_id, "Hospital Name" %>
+  		    <% if f.object.new_record? %>
+     		 	<%= f.collection_select :hospital_id,Admin::Hospital.all,:id,:name,{:prompt => true}, {:class=>"select_text"} %>
+     		 <% else %>
+     		 	<%= f.hidden_field :hospital_id, :value => @admin_group.hospital_id %>
+     		 	<%= @admin_group.hospital.name %>
+     		 <% end %>	
+    	</div>
+    	<% else %>
+	    	<%= f.hidden_field "hospital_id", :value => current_user.hospital_id %>
+      <% end %>
+      <div class="actions hidden">
+	     <%= f.hidden_field "add_users_ids",:value => "" %>
+   	  <%= f.hidden_field "remove_users_ids",:value => "" %>
+        <%= hidden_field_tag "save_method", "", :value=>"apply" %>
+        <%= f.submit %>
+      </div>
+    </div>
+    <div class="fltlft">
+      <div class="field">
+        <span class="star">&nbsp;</span><%= label_tag :group_members, "Group Members" %>
+        <div id="gp_mem"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

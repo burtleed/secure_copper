@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/securecopper/!svn/ver/208/db/migrate
+END
+20110823073249_create_table_attachments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/securecopper/!svn/ver/6/db/migrate/20110823073249_create_table_attachments.rb
+END
+20110907070213_add_fields_to_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/31/db/migrate/20110907070213_add_fields_to_user.rb
+END
+20111014091221_add_indexes_on_titles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/securecopper/!svn/ver/147/db/migrate/20111014091221_add_indexes_on_titles.rb
+END
+20111003090644_add_hospital_id_to_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/securecopper/!svn/ver/76/db/migrate/20111003090644_add_hospital_id_to_group.rb
+END
+20110825100708_remove_column_from_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/securecopper/!svn/ver/11/db/migrate/20110825100708_remove_column_from_messages.rb
+END
+20110930131937_create_slugs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/securecopper/!svn/ver/74/db/migrate/20110930131937_create_slugs.rb
+END
+20110912075251_create_favorites.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/securecopper/!svn/ver/36/db/migrate/20110912075251_create_favorites.rb
+END
+20111226060617_create_apn_notifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/securecopper/!svn/ver/208/db/migrate/20111226060617_create_apn_notifications.rb
+END
+20110919105710_create_hospital_titles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/securecopper/!svn/ver/79/db/migrate/20110919105710_create_hospital_titles.rb
+END
+20110915132620_create_memberships.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/49/db/migrate/20110915132620_create_memberships.rb
+END
+20111219120309_add_device_type_and_device_registration_id_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/securecopper/!svn/ver/183/db/migrate/20111219120309_add_device_type_and_device_registration_id_to_users.rb
+END
+20111226060616_create_apn_devices.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/securecopper/!svn/ver/208/db/migrate/20111226060616_create_apn_devices.rb
+END
+20110902102109_create_admin_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/securecopper/!svn/ver/19/db/migrate/20110902102109_create_admin_groups.rb
+END
+20110919105615_create_admin_titles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/securecopper/!svn/ver/49/db/migrate/20110919105615_create_admin_titles.rb
+END
+20110907065422_create_admin_hospitals.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/securecopper/!svn/ver/61/db/migrate/20110907065422_create_admin_hospitals.rb
+END
+20110903075253_add_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/securecopper/!svn/ver/76/db/migrate/20110903075253_add_group.rb
+END
+20110817060525_create_default_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/securecopper/!svn/ver/77/db/migrate/20110817060525_create_default_user.rb
+END
+20111004060907_create_group_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/securecopper/!svn/ver/77/db/migrate/20111004060907_create_group_user.rb
+END
+20111018053004_remove_column_member_type_from_memberships.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/securecopper/!svn/ver/164/db/migrate/20111018053004_remove_column_member_type_from_memberships.rb
+END
+20111219133438_create_delayed_jobs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/securecopper/!svn/ver/186/db/migrate/20111219133438_create_delayed_jobs.rb
+END
+20111021113848_add_indexes_on_all_tables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/securecopper/!svn/ver/171/db/migrate/20111021113848_add_indexes_on_all_tables.rb
+END
+20110902103659_add_column_group_id_to_users_.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/securecopper/!svn/ver/19/db/migrate/20110902103659_add_column_group_id_to_users_.rb
+END
+20110915082247_create_admin_hospital_groups.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/securecopper/!svn/ver/79/db/migrate/20110915082247_create_admin_hospital_groups.rb
+END
+20110823074200_create_table_temp_attachments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/securecopper/!svn/ver/6/db/migrate/20110823074200_create_table_temp_attachments.rb
+END
+20110820134514_add_column_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/6/db/migrate/20110820134514_add_column_to_users.rb
+END
+20110817055740_create_admin_roles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/77/db/migrate/20110817055740_create_admin_roles.rb
+END
+20111003061309_add_hospital_id_to_titles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/securecopper/!svn/ver/79/db/migrate/20111003061309_add_hospital_id_to_titles.rb
+END
+20110823090114_add_column_to_message_recepients.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/securecopper/!svn/ver/6/db/migrate/20110823090114_add_column_to_message_recepients.rb
+END
+20110817055047_devise_create_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/1/db/migrate/20110817055047_devise_create_users.rb
+END
+20111017054045_add_reset_password_token_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/securecopper/!svn/ver/157/db/migrate/20111017054045_add_reset_password_token_to_users.rb
+END
+20111004101819_add_name_to_admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/securecopper/!svn/ver/77/db/migrate/20111004101819_add_name_to_admin.rb
+END
+20111021113326_add_index_on_memberships.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/securecopper/!svn/ver/171/db/migrate/20111021113326_add_index_on_memberships.rb
+END
+20111004061126_edit_group_id_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/77/db/migrate/20111004061126_edit_group_id_user.rb
+END
+20110819075144_create_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/securecopper/!svn/ver/79/db/migrate/20110819075144_create_messages.rb
+END
+20110819102058_create_table_message_recepients.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/securecopper/!svn/ver/6/db/migrate/20110819102058_create_table_message_recepients.rb
+END
+20110902054135_create_table_expire_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/securecopper/!svn/ver/15/db/migrate/20110902054135_create_table_expire_settings.rb
+END
+20110927112859_add_title_id_to_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/securecopper/!svn/ver/49/db/migrate/20110927112859_add_title_id_to_users.rb
+END
+20111226060618_alter_apn_devices.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/208/db/migrate/20111226060618_alter_apn_devices.rb
+END

@@ -1,0 +1,28 @@
+<p><strong>From:</strong> <%= (@message.sender == @user)?("you"):(@message.sender.email) %></p>
+<p><strong>Created At:</strong> <%= @message.created_at.to_s(:long) %></p>
+<p><strong>To:</strong> <%= @message.recepients.collect(&:email).join(',  ')  %></p>
+<p>
+  <strong>Message</strong><br />
+  <%=h @message.body %>
+</p>
+<% if !@message.expired_at.nil?%>
+<p>
+  Expired At:<br/>
+  <%= @message.expired_at %>
+</p>
+<%end%>
+
+<p>
+  <strong>Attachments</strong><br />
+  <% i =0 %>
+  <%for img in @message.attachments %>
+    <% i = i+1 %>
+    <%= image_tag(img.data.url(:thumb))%>
+    <% if i%4 == 0%><br/><% end %>
+  <% end %>
+</p>
+
+<p>
+  <%= link_to "Inbox", messages_path%> |
+  <%= link_to "Outbox", messages_path(:mailbox => :sent)%>
+</p>

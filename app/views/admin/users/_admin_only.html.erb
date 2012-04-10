@@ -1,0 +1,17 @@
+      <div class="field" id="group_form">
+        <%= render :partial=>"/admin/users/group_form", :locals=>{:disabled=>disabled, :hospital_id=>hospital_id} %>
+      </div>
+      <div class="field" id="title_form">
+        <%= render :partial=>"/admin/users/title_form", :locals=>{:disabled=>disabled, :hospital_id=>hospital_id} %>
+      </div>
+      <% unless hospital_id.blank? -%>
+	      <div class="field" id="title_form">
+	        <%= render :partial=>"/admin/users/group_membership", :locals=>{:disabled=>disabled, :hospital_id=>hospital_id} %>
+	      </div>
+	      <div class="field" id="allow_users">
+			  <%= render :partial => "/admin/users/allow_user_membership" %> 	      	
+	      </div>
+	      <div class="field" id="deny_users">
+	        <%= render :partial => "/admin/users/deny_user_membership" %>
+	      </div>
+      <% end -%>

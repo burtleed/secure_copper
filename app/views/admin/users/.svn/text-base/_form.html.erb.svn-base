@@ -1,0 +1,107 @@
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'user' %>
+<% end %>
+
+<%= form_for([:admin,@user], :html=>{:multipart=>true}) do |f| %>
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this new information from being saved:</h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<div id="element-box">
+  <div class="m">
+    <div class="fltlft">
+      <div class="field">
+        <span class="star">*</span><%= f.label :email %>
+        <%= f.text_field :email, :class=>"input_text" %>
+      </div>
+      <% if controller.controller_name == "users" && (controller.action_name == "new" || controller.action_name == "create") -%>
+      <div class="field">
+        <span class="star">*</span><%= f.label :password %>
+        <%= f.password_field :password, :class=>"input_text" %>
+      </div>
+      <% end -%>
+      <div class="field">
+        <span class="star">*</span><%= f.label :first_name %>
+        <%= f.text_field :first_name, :class=>"input_text" %>
+      </div>
+      <div class="field">
+        <span class="star">*</span><%= f.label :last_name %>
+        <%= f.text_field :last_name, :class=>"input_text" %>
+      </div>
+      <div class="field">
+        <span class="star">*</span><%= f.label :phone_number, "Mobile #" %>
+        <%= f.text_field :phone_number, :class=>"input_text" %><br/>
+        <span style="margin-left:150px;">Ex: 123-456-7891</span>
+      </div>
+      <% if current_user.is_super_admin? %>
+      <div class="field">
+        <span class="star">*</span><%= f.label :role_id %>
+        <%= f.collection_select :role_id, Admin::Role.all,:id,:role_name,{:prompt => true}, {:class=>"select_text"} %>
+      </div>
+      <% else %>
+        <% if controller.controller_name == "users" && (controller.action_name == "new" || controller.action_name == "create") -%>
+          <%= f.hidden_field :role_id, :value=>3 %>
+        <% end -%>
+      <% end %>
+      <% if controller.controller_name == "users" && (controller.action_name == "new" || controller.action_name == "create") -%>
+      <%= f.hidden_field :parent_id, :value => current_user.id %>
+      <% end -%>
+      <% if current_user.is_super_admin? %>
+      <div class="field">
+        <span class="star">*</span><%= f.label :hospital_id %>
+        <%= f.collection_select :hospital_id, Admin::Hospital.all,:id,:name,{:prompt => true}, {:class=>"select_text"} %>
+      </div>
+      <% else %>
+        	<%= f.hidden_field :hospital_id, :value => current_user.hospital_id %>
+      <% end %>
+      <% if controller.controller_name == "users" && (controller.action_name == "update" || controller.action_name == "edit") %>
+			<%= hidden_field_tag :user_id, @user.id %>
+		<% else %>
+			<%= hidden_field_tag :user_id, "" %>      
+      <% end %> 
+      <span id="admin_only">
+        <% if controller.controller_name == "users" && (controller.action_name == "new") -%>
+          <%= render :partial=>"/admin/users/admin_only", :locals=>{:f=> f,:disabled=>(current_user.is_super_admin?)?(true):(false),:hospital_id=>(current_user.is_super_admin?)?(""):(current_user.hospital_id)} %>
+        <% else %>
+          <%= render :partial=>"/admin/users/admin_only", :locals=>{:f=> f,:disabled=>false, :hospital_id=>@user.hospital_id} %>
+        <% end %>
+      </span>
+      <div class="actions hidden">
+        <%= hidden_field_tag "save_method", "", :value=>"apply" %>
+        <%= f.submit %>
+      </div>
+    </div>
+    <div class="fltlft">
+      <div class="field">
+        <span class="star">&nbsp;</span><%= f.label :photo %>
+        <span>
+        <% if @user.photo.exists? then %>
+        	<%= image_tag @user.photo.url(:thumb) %>
+        <% end %>
+        </span>
+        <%= f.file_field :photo %>
+      </div>
+    </div>
+    <% if current_user.is_super_admin? %> 
+      <div class=fltlft>
+        <div class="field">
+          <span>&nbsp;</span><%= f.label :device_type %>
+          <!--<span><%#=@user.device_type%></span> -->
+					<span><%= f.text_field :device_type %></span>
+        </div>
+        <div class="field">
+          <span>&nbsp;</span><%= f.label :device_registration_id %>
+          <span><%=@user.device_registration_id %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% end %>

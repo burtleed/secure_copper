@@ -1,0 +1,43 @@
+<%= form_tag allinone_admin_groups_path, :id => 'myform', :name => 'myform'  do |f| -%>
+  <%= render :partial=>"/common/index_toolbar", 
+    :locals=>{ 
+      :title=>"Group Manager: List", :icon_class=>"icon-48-group", :model_name=>"admin_group", 
+      :allow_new=> current_user.is_any_admin?,
+      :allow_edit=> true,:allow_activate=> false,:allow_block=> false,:allow_unblock=> false,
+      :allow_delete=> current_user.is_any_admin?,:allow_sendmessage => false,:allow_settings => false
+    } %>
+  
+  <%= render :partial=>"/common/blackbar", 
+    :locals=>{ 
+      :allow_search=> current_user.is_super_admin?, :search_text => session[:search_groups]
+    } %>
+    
+  <div class="contentsbar">
+  	<!--content bar-->
+  	<table class="tablegray">
+  	  <thead>
+  			<tr>
+  		    <th width="1%"><%= check_box_tag "checkall-toggle", "", false, :title=>"Check All" %></th>
+  				<th class="left">Name</th>
+  				<% if current_user.is_super_admin? %><th class="nowrap" width="61%;"><b>Hospital Name</b></th><% end %>
+  				<th class="nowrap" width="20%;"><b>Users in Group</b></th>
+  			</tr>
+  	  </thead>
+  	  <tbody>
+  			<% @admin_groups.each do |admin_group| %>
+  		  <tr>
+  		    <td class="center">
+  		      <%= check_box_tag "cb#{admin_group.id}", admin_group.id, false, :title=>"Checkbox for #{admin_group.name}", :name=>"cid[]" %>
+  		    </td>   
+          <td><%= link_to admin_group.name,edit_admin_group_path(admin_group) %></td>
+  				<% if current_user.is_super_admin? %><td class="center"><%= admin_group.hospital.name %></td><% end -%>
+  				<td class="center"><%= admin_group.users.count %></td>
+  		  </tr>
+  		  <% end %>
+  		</tbody>
+  	</table>
+  <!--content bar close-->			
+  </div>
+  <%= hidden_field_tag :source, "", :value=>"index" %>
+  <%= will_paginate @admin_groups%>
+<% end -%>

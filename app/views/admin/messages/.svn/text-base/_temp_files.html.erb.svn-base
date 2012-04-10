@@ -1,0 +1,18 @@
+<% files_contents = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif','text/html','text/plain','application/pdf','application/xls','application/doc','application/msword','application/zip']%>
+<% files = current_user.temp_file_uploads.find(:all,:conditions=>["keyname= ?",session[:session_id]]) %>
+<% if !files.empty? %>
+  <% for temp_file in current_user.temp_file_uploads %>
+    <div class="uploadifyQueueItem" style="margin-left:20px;">
+      <div class="cancel"><%= link_to image_tag('/images/cancel.png'),temp_file_delete_path(temp_file.id),:remote => true %></div>
+      <!--<span class="fileName"><%= temp_file.data_file_name %>
+      <%= temp_file.file_size.to_s  %></span>
+      <span class="percentage"> - 100%</span>-->
+      <% if files_contents.include?(temp_file.data_content_type)%>
+        <span><%= image_tag("#{temp_file.data.url(:thumb)}") %></span>
+      <% else %>
+        <span><%= temp_file.data_file_name %></span>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+<span id="attachment_size"><%= files.size %></span> attachments

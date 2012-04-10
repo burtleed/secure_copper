@@ -1,0 +1,43 @@
+<%= form_tag allinone_admin_hospitals_path,:id => 'myform', :name => 'myform' do |f| -%>
+  <%= render :partial=>"/common/index_toolbar", 
+    :locals=>{ 
+      :title=>"Hospital Manager: List", :icon_class=>"icon-48-hospital", :model_name=>"admin_hospital", 
+      :allow_new=> current_user.is_super_admin?,
+      :allow_edit=> true,:allow_activate=> false,:allow_block=> false,:allow_unblock=> false,
+      :allow_delete=> current_user.is_super_admin?,:allow_sendmessage => false,:allow_settings => false
+    } %>
+  
+  <%= render :partial=>"/common/blackbar", 
+    :locals=>{ 
+      :allow_search=> current_user.is_super_admin?, :search_text => session[:search_hospitals]
+    } %>
+    
+  <div class="contentsbar">
+  	<!--content bar-->
+  	<table class="tablegray">
+  	  <thead>
+  			<tr>
+  		    <th width="1%"><%= check_box_tag "checkall-toggle", "", false, :title=>"Check All" %></th>
+  				<th class="left">Name</th>
+  				<th class="nowrap" width="61%;"><b>Address</b></th>
+  				<th class="nowrap" width="10%;"><b>User limit</b></th>
+  			</tr>
+  	  </thead>
+  	  <tbody>
+  			<% @admin_hospitals.each do |admin_hospital| %>
+  		  <tr>
+  		    <td class="center">
+  		      <%= check_box_tag "cb#{admin_hospital.id}", admin_hospital.id, false, :title=>"Checkbox for #{admin_hospital.name}", :name=>"cid[]" %>
+  		    </td>   
+          <td><%= link_to "#{admin_hospital.name}",edit_admin_hospital_path(admin_hospital) %></td>
+  				<td class="center"><%= admin_hospital.address %></td>
+  				<td class="center"><%= admin_hospital.user_limit %></td>
+  		  </tr>
+  		  <% end %>
+  		</tbody>
+  	</table>
+  <!--content bar close-->			
+  </div>
+  <%= hidden_field_tag :source, "", :value=>"index" %>
+  <%= will_paginate @admin_hospitals  if current_user.is_super_admin? %>
+<% end -%>

@@ -1,0 +1,43 @@
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'message' %>
+<% end %>
+
+  <%= render :partial=>"/common/index_toolbar", 
+    :locals=>{ 
+      :title=>"Messages: List", :icon_class=>"icon-48-messages", :model_name=>"admin_message", 
+      :allow_new=> false,
+      :allow_edit=> false,:allow_activate=> false,:allow_block=> false,:allow_unblock=> false,
+      :allow_delete=> false,:allow_sendmessage => true,:allow_settings => true
+    } %>
+	<div class="chatout">
+	<!--content bar-->
+		<div class="chatleft">
+			<!--chat left-->
+				<div class="ct_search">
+					<!--search-->
+						<div class="dvinptsearch">
+							<%= form_tag search_contact_admin_messages_path, :remote => true do |f| %>
+								<%= text_field_tag "first_name",'', :class=> "inputsearch"%>
+    	          			<%= submit_tag "search", :class => "hide_button" %>
+    	          		<% end %>
+						</div>
+					<!--search close-->
+					</div>
+					<div class="ct_contacts">
+					<!--contact list-->
+						<%= render :partial => "/admin/messages/contact_list_all", :object => @users_list %>
+					<!--contact list close-->
+					</div>
+				<!--chat left-->				
+				</div>
+				 <%= hidden_field_tag :source, "", :value=>"index" %>
+				<div class="chatright">
+				<!--chat right-->
+					<div class="chat_notstarted" style="display:block;"></div>
+		  	          <%#= render :partial=>"/admin/messages/message_list", :locals=>{ :recepient_id=>@recepient_id } %>
+
+					<%= render :partial=>"/admin/messages/send_message", :locals=>{ :recepient_id=>@recepient_id,:recepient => @recepient, :disabled=> @recepient_id.blank?} %>
+				<!--chat right close-->				
+				</div>
+			<!--content bar close-->			
+			</div>

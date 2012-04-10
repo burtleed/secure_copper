@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/securecopper/!svn/ver/240/app/views/messages
+END
+_temp_files.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/securecopper/!svn/ver/15/app/views/messages/_temp_files.html.erb
+END
+_attachment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/securecopper/!svn/ver/240/app/views/messages/_attachment.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/240/app/views/messages/index.html.erb
+END
+_sent.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/securecopper/!svn/ver/6/app/views/messages/_sent.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/securecopper/!svn/ver/53/app/views/messages/new.html.erb
+END
+_files_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/securecopper/!svn/ver/15/app/views/messages/_files_list.html.erb
+END
+_inbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/34/app/views/messages/_inbox.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/securecopper/!svn/ver/6/app/views/messages/show.html.erb
+END
+_readed.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/9/app/views/messages/_readed.html.erb
+END

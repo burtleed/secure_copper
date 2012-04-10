@@ -1,0 +1,2 @@
+        <span class="star">*</span><%= label_tag :user_primary_group_id, "Primary Group" %>
+        <%= collection_select :user, :primary_group_id, (hospital_id.blank?)?(Admin::Group.all):(Admin::Group.group_list(hospital_id)) ,:id,:name,{:prompt => true}, {:class=>"select_text", :disabled=>disabled} %>

@@ -1,0 +1,34 @@
+<%= form_for @user, :url => favourites_path(@user), :html => { :method => :put, :class => "edit_post", :id => "edit_post_45" }  do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this favorite from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :favorable_type %><br />
+    <%= select( "favorite","favorable_type", ["Group","User"]) %>
+  </div>
+  <div id = "userlist">
+    
+  </div>
+  
+  <div id= "grouplist">
+    <% for group in Admin::Group.all%>
+    <%= check_box("group","#{group.name}")%><%= group.name%>
+    <%end%>
+  </div>
+  <div class="field">
+    <%= f.label :favorite_id %><br />
+    <%= f.text_field :favorite_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

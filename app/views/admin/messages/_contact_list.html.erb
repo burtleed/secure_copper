@@ -1,0 +1,8 @@
+<li>
+	<div class="ctimg"><a href="#"><%= image_tag user.mini_photo_url,:size => "43x43" %></a></div>
+	<div class="cttxt">
+		<p class="calibri13darkgray"><%= user.name %></p>
+		<p class="calibri13ltgray"><%#= user.primary_user_group.name %> <%= user.email %><%= hidden_field_tag "contact_list_#{user.id}", user.id %></p>
+	</div>
+</li>
+

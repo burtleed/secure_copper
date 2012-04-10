@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/securecopper/!svn/ver/148/app/views/admin/expire_settings_messages
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/securecopper/!svn/ver/148/app/views/admin/expire_settings_messages/new.html.erb
+END
+update.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/securecopper/!svn/ver/127/app/views/admin/expire_settings_messages/update.js.erb
+END
+_error_messages.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/securecopper/!svn/ver/127/app/views/admin/expire_settings_messages/_error_messages.html.erb
+END

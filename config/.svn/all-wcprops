@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/securecopper/!svn/ver/241/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/securecopper/!svn/ver/227/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/securecopper/!svn/ver/1/config/database.yml
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/securecopper/!svn/ver/238/config/application.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/securecopper/!svn/ver/1/config/boot.rb
+END
+config.yml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/securecopper/!svn/ver/152/config/config.yml
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/securecopper/!svn/ver/1/config/environment.rb
+END
+apple_push_notification_development.pem
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/208/config/apple_push_notification_development.pem
+END
+apple_push_notification_production.pem
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/securecopper/!svn/ver/216/config/apple_push_notification_production.pem
+END
+schedule.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/securecopper/!svn/ver/210/config/schedule.rb
+END

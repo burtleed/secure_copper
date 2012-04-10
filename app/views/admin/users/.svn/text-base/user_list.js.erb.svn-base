@@ -1,0 +1,18 @@
+$.colorbox.close();
+<% if @act == "allow_add" %>
+	<% @users.each do |user| %>
+		$("#user_allowed_member_ids_").append('<option value="<%=user.id%>" selected=selected><%=user.name%></option>');
+	<% end %>	
+<% elsif @act == "allow_remove" %>
+	<%= @cid.each do |oid| %>
+		$("#user_allowed_member_ids_ option[value='<%=oid%>']").remove()
+	<% end %>
+<% elsif @act == "deny_add" %>
+	<% @users.each do |user| %>
+		$("#user_deny_member_ids_").append('<option value="<%=user.id%>" selected=selected><%=user.name%></option>');
+	<% end %>
+<% elsif @act == "deny_remove" %>
+	<%= @cid.each do |oid| %>
+		$("#user_deny_member_ids_ option[value='<%=oid%>']").remove()
+	<% end %>	
+<% end %>	

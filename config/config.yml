@@ -1,0 +1,12 @@
+defaults: &defaults
+  from_email: pratik@complitech.net
+	
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  
+production:
+  <<: *defaults
+	

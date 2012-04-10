@@ -1,0 +1,9 @@
+<div class="photochat">
+	<!--chat photo-->
+	<div class="ctimg">
+		<%= image_tag  message.sender.photo.url(:mini), :size => "43x43"%>
+   	<div><%= message.sender_first_name %></div>
+    <div><%= message.sender_title %></div>
+	</div>
+	<!--chat photo close-->									
+</div> 

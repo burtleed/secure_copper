@@ -1,0 +1,39 @@
+<h2>Inbox</h2>
+<table>
+	<tr>
+		<th>Del?</th>
+		<th>Sent</th>
+		<th>Sender</th>
+		<th>Sent</th>
+	</tr>
+	<% if @messages.size == 0 %>
+		<tr>
+			<td colspan="4">
+				No messages
+			</td>
+		</tr>
+	<% else %>
+		<% for message in @messages %>
+			<tr>
+				<td><%= check_box_tag "delete[]", message.id %></td>
+				<td>
+					<% if !message.read_at.nil? %>
+					  <%= link_to h(truncate(message.body,:length => 15, :omission=>'..')), message_path(message) %>
+					<% else %>
+					  <%= link_to "#{h(truncate(message.body,:length => 15, :omission=>'..'))} (unread)", message_path(message) %>
+					<% end %>
+				</td>
+				<td><%= h(message.sender.email) %><%#= link_to h(message.sender.email), admin_user_path(@user) %></td>
+		    <td><%=h message.created_at.to_s(:long) %></td>
+			</tr>
+		<% end %>
+		<tr>
+			<td colspan="4">
+				<%= submit_tag "Delete" %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to "Outbox", messages_path(:mailbox => :sent)%> |
+<%#= link_to "Readed Messages", messages_path(:mailbox => :readed)%> <!--|-->
+<%= link_to "Compose", new_message_path%>

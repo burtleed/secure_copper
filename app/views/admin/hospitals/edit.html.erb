@@ -1,0 +1,6 @@
+<%= render :partial=>"/common/edit_toolbar", 
+  :locals=>{ 
+    :title=>"Hospital Manager: Edit Hospital", :icon_class=>"icon-48-hospital", :model_name=>"admin_hospital",
+    :allow_save_new => current_user.is_super_admin?
+  } %>
+<%= render 'form' %>

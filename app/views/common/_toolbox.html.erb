@@ -1,0 +1,22 @@
+<div id="toolbar-box">
+  <div class="m">
+		<div id="headerrt">
+		<!--header right-->
+    <%= render :partial=>"/common/toolbar", 
+      :locals=>{ 
+        :model_name=> model_name,
+        :allow_new=> allow_new,
+        :allow_edit=> allow_edit,:allow_activate=> allow_activate,
+        :allow_block=> allow_block,:allow_delete=> allow_delete,
+        :allow_save=> allow_save,:allow_save_new=> allow_save_new, 
+        :allow_cancel=> allow_cancel, :allow_close=>allow_close,
+        :allow_sendmessage => allow_sendmessage,:allow_settings => allow_settings,
+        :allow_send => allow_send
+      } %>
+		<!--header right close-->			
+		</div>
+		<div class="pagetitle <%= icon_class %>">
+      <h1><%= title %></h1>
+    </div>
+  </div>
+</div>

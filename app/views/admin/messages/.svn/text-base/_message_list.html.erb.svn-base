@@ -1,0 +1,6 @@
+  	          <div class="messages_per_user" id="messages_per_user">
+                Click on contact to get started.
+  	          </div>
+  	          <div class="div_send_message_form">
+  	            <%= render :partial=>"/admin/messages/send_message", :locals=>{ :recepient_id=>recepient_id,:recepient => @recepient, :disabled=> recepient_id.blank?} %>
+  	          </div>

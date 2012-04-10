@@ -1,0 +1,42 @@
+<div class="contentsbar">
+  	<% if !users.empty? %>
+  	<!--content bar-->
+	<%= form_for :user, :url => admin_get_user_list_path(:act => act) , :remote => true do |f| %>
+  	<table class="tablegray">
+  	  <thead>
+  			<tr>
+  		    <th width="1%"><%= check_box_tag "checkall-toggle", "", false, :title=>"Check All" %></th>
+  				<th class="left" width="10%">Name</th>
+  				<th class="nowrap" width="10%">User Groups</th>
+  				<th class="nowrap" width="15%">Role</th>
+  				<th class="nowrap" width="15%">Email</th>
+  			</tr>
+  	  </thead>
+  	  <tbody>
+		<% users.each do |user| -%>
+		<tr>
+			<td class="center"><%= check_box_tag "cb#{user.id}", user.id, false, :title=>"Checkbox for #{user.name}", :name=>"cid[]" %></td>
+			<td><%= user.name %><%= ", " + user.title.name unless user.title.nil? %></td>
+			<td class="center"><%= user.primary_user_group.name unless user.primary_user_group.nil? %></td>
+			<td class="center"><%= user.role.role_name unless user.role.nil? %></td>
+			<td class="center"><%= user.email %></td>
+		</tr>	
+	<% end -%>
+	<tr>
+		<td colspan=5 align="right"><button type="submit" class="bluebtn" id="user_submit">Select Users</button></td>
+	</tr>
+	</tbody>	
+	</table>
+	<% end %>
+	<% else %>
+		<% if act == "allow_add" %>
+			&nbsp;&nbsp;&nbsp;You have added allow groups, so you allowed all users. No more users are there which are not in your list.
+		<% elsif act == "allow_remove" %>
+			&nbsp;&nbsp;&nbsp;Your allow users list is empty!
+		<% elsif act == "deny_add" %>
+			&nbsp;&nbsp;&nbsp;No user is added to selected groups.!
+		<% elsif act == "deny_remove" %>
+			&nbsp;&nbsp;&nbsp;Your deny users list is empty!
+		<% end %>
+	<% end %>
+</div>

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/securecopper/!svn/ver/240/app/views/admin/users
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/securecopper/!svn/ver/77/app/views/admin/users/edit.html.erb
+END
+_allow_user_membership.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/securecopper/!svn/ver/165/app/views/admin/users/_allow_user_membership.html.erb
+END
+_group_membership.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/securecopper/!svn/ver/82/app/views/admin/users/_group_membership.html.erb
+END
+_deny_user_membership.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/securecopper/!svn/ver/165/app/views/admin/users/_deny_user_membership.html.erb
+END
+change_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/securecopper/!svn/ver/158/app/views/admin/users/change_password.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/securecopper/!svn/ver/240/app/views/admin/users/index.html.erb
+END
+_admin_only.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/securecopper/!svn/ver/165/app/views/admin/users/_admin_only.html.erb
+END
+_user_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/securecopper/!svn/ver/165/app/views/admin/users/_user_list.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/77/app/views/admin/users/new.html.erb
+END
+_group_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/securecopper/!svn/ver/77/app/views/admin/users/_group_form.html.erb
+END
+user_list.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/securecopper/!svn/ver/165/app/views/admin/users/user_list.js.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/securecopper/!svn/ver/220/app/views/admin/users/_form.html.erb
+END
+_title_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/securecopper/!svn/ver/77/app/views/admin/users/_title_form.html.erb
+END

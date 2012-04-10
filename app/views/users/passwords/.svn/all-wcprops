@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/securecopper/!svn/ver/1/app/views/users/passwords
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/securecopper/!svn/ver/1/app/views/users/passwords/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/securecopper/!svn/ver/1/app/views/users/passwords/new.html.erb
+END

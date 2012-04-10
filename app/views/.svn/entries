@@ -1,0 +1,64 @@
+10
+
+dir
+241
+http://svn.complitech.net/securecopper/app/views
+http://svn.complitech.net/securecopper
+
+
+
+2012-01-23T07:28:00.728345Z
+240
+manan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+c4d47c72-2e76-4af6-8d88-b8596132a0da
+
+layouts
+dir
+
+users
+dir
+
+favorites
+dir
+
+expire_settings_messages
+dir
+
+session
+dir
+
+passwords
+dir
+
+messages
+dir
+
+admin
+dir
+
+common
+dir
+
+home
+dir
+
+mailer
+dir
+
+temp_file_uploads
+dir
+

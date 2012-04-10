@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/securecopper/!svn/ver/239/app/models
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/securecopper/!svn/ver/239/app/models/user.rb
+END
+favorite.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/securecopper/!svn/ver/36/app/models/favorite.rb
+END
+expire_settings_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/securecopper/!svn/ver/163/app/models/expire_settings_message.rb
+END
+message_recepient.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/securecopper/!svn/ver/53/app/models/message_recepient.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/securecopper/!svn/ver/234/app/models/message.rb
+END
+admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/securecopper/!svn/ver/1/app/models/admin.rb
+END
+attachment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/securecopper/!svn/ver/239/app/models/attachment.rb
+END
+temp_file_upload.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/securecopper/!svn/ver/202/app/models/temp_file_upload.rb
+END
+membership.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/securecopper/!svn/ver/164/app/models/membership.rb
+END

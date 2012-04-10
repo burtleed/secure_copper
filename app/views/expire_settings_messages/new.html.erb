@@ -1,0 +1,36 @@
+<%= form_for @expire_setting do |f| %>
+    <p>
+      <%= f.error_messages %>
+    </p>
+    <%(@expire_setting.flag == "0")?(style_dis = "display:none"):(style_dis = "display:block") %>
+    <p>
+      Expire Settings ::<br/>
+        <%= f.radio_button(:flag,1,{:onclick =>"$('#expire_setting_div').show();" })%> On
+        <%= f.radio_button(:flag,0)%> Off
+      <div id="expire_setting_div" style="<%= style_dis%>">
+        Select Hour to expire the message
+        <div id="slider"></div>
+      </div>
+    </p>
+    <p>
+        Hour Limit :: <%= f.text_field "lifespan_hours",:style=>"border:0; color:#f6931f; font-weight:bold;" %> 
+    </p>
+    <p>
+      <%= f.submit "Submit"%>
+    </p>
+
+<%end%>
+<script>
+	$(function sliddis() {
+		$( "#slider" ).slider({
+			value:<%= @expire_setting.lifespan_hours %>,
+			min: 0,
+			max: 50,
+			step: 1,
+			slide: function( event, ui ) {
+				$( "#expire_settings_message_lifespan_hours" ).val( ui.value);
+			}
+		});
+		$( "#expire_settings_message_lifespan_hours" ).val($( "#slider" ).slider( "value" ));
+	});
+</script>

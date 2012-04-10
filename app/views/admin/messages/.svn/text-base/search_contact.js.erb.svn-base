@@ -1,0 +1,7 @@
+//$('.div_contact_list').html("<%=escape_javascript(render :partial => '/admin/messages/contact_list_all',:object => @users_list)%>")
+//$('#messages_per_user').html("Click on contact to get started.")
+//$(".div_contact_list_no_border").click(message_list);
+$('.ct_contacts').html("<%=escape_javascript(render :partial => '/admin/messages/contact_list_all',:object => @users_list)%>")
+$('.chat_notstarted').show();
+$('.chat_started').remove();
+$('.ct_contacts li').click(message_list);

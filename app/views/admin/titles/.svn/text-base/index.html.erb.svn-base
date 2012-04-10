@@ -1,0 +1,41 @@
+<%= form_tag allinone_admin_titles_path,:id => 'myform', :name => 'myform'  do |f| -%>
+  <%= render :partial=>"/common/index_toolbar", 
+    :locals=>{ 
+      :title=>"Title Manager: List", :icon_class=>"icon-48-title", :model_name=>"admin_title", 
+      :allow_new=> true,
+      :allow_edit=> true,:allow_activate=> false,:allow_block=> false,:allow_unblock=> false,
+      :allow_delete=> true,:allow_sendmessage => false,:allow_settings => false
+    } %>
+  
+  <%= render :partial=>"/common/blackbar", 
+    :locals=>{ 
+      :allow_search=> current_user.is_super_admin?, :search_text => session[:search_titles]
+    } %>
+    
+  <div class="contentsbar">
+  	<!--content bar-->
+  	<table class="tablegray">
+  	  <thead>
+  			<tr>
+  		    <th width="1%"><%= check_box_tag "checkall-toggle", "", false, :title=>"Check All" %></th>
+  				<th class="left">Name</th>
+  				<% if current_user.is_super_admin? %><th class="nowrap" width="61%;"><b>Hospital Name</b></th><% end %>
+  			</tr>
+  	  </thead>
+  	  <tbody>
+  			<% @admin_titles.each do |admin_title| %>
+  		  <tr>
+  		    <td class="center">
+  		      <%= check_box_tag "cb#{admin_title.id}", admin_title.id, false, :title=>"Checkbox for #{admin_title.name}", :name=>"cid[]" %>
+  		    </td>   
+          <td><%= link_to "#{admin_title.name}",edit_admin_title_path(admin_title.friendly_id) %></td>
+  				<% if current_user.is_super_admin? %><td class="center"><%= admin_title.hospital.name %></td><% end -%>
+  		  </tr>
+  		  <% end %>
+  		</tbody>
+  	</table>
+  <!--content bar close-->			
+  </div>
+  <%= hidden_field_tag :source, "", :value=>"index" %>
+  <%= will_paginate @admin_titles %>
+<% end -%>

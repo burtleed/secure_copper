@@ -1,0 +1,58 @@
+<%= form_tag  allinone_admin_users_path, :id => 'myform',:name => 'myform'  do |f| -%>
+  <%= render :partial=>"/common/index_toolbar", 
+    :locals=>{ 
+      :title=>"User Manager: List", :icon_class=>"icon-48-user", :model_name=>"admin_user", 
+      :allow_new=> current_user.is_any_admin?,
+      :allow_edit=> true,:allow_activate=> current_user.is_any_admin?,:allow_block=> current_user.is_any_admin?,:allow_unblock=> current_user.is_any_admin?,
+      :allow_delete=> current_user.is_any_admin?,:allow_sendmessage => false,:allow_settings => false
+    } %>
+  
+  <%= render :partial=>"/common/blackbar", 
+    :locals=>{ 
+      :allow_search=> current_user.is_any_admin?, :search_text => session[:search_users]
+    } %>
+    
+  <div class="contentsbar">
+  	<!--content bar-->
+  	<table class="tablegray">
+  	  <thead>
+  			<tr>
+  		    <th width="1%"><%= check_box_tag "checkall-toggle", "", false, :title=>"Check All" %></th>
+  				<th class="left">Name</th>
+  				<th class="nowrap" width="10%">User Groups</th>
+  				<th class="nowrap" width="15%">Role</th>
+  				<% if current_user.is_any_admin? -%><th class="nowrap" width="5%">Enabled</th><% end -%>
+  				<th class="nowrap" width="15%">Email</th>
+          <th class="nowrap" width="16%">Last Visit Date</th>
+  			</tr>
+  	  </thead>
+  	  <tbody>
+  			<% @users.each do |user| %>
+  		  <tr>
+  		    <td class="center">
+  		      <%= check_box_tag "cb#{user.id}", user.id, false, :title=>"Checkbox for #{user.name}", :name=>"cid[]" %>
+  		    </td>
+          <td><%= link_to "#{user.name}",edit_admin_user_path(user) %><%= ", " + user.title.name unless user.title.nil? %></td>
+          <td class="center"><%= user.primary_user_group.name unless user.primary_user_group.nil? %></td>
+          <td class="center"><%= user.role.role_name unless user.role.nil? %></td>
+          <% if current_user.is_any_admin? %>
+          <td class="center">
+            <% if user.active? -%>
+            	<%= image_tag "/images/tick.png" %>
+            <% else %>
+            	<%= image_tag "/images/disabled.png" %>
+            <% end -%>
+          </td>
+          <% end -%>
+          <td class="center"><%= user.email %></td>
+          <td class="center"><%= user.last_sign_in_at.strftime('%Y-%m-%d %H:%M:%S') unless user.last_sign_in_at.nil? %></td>
+  		  </tr>
+  		  <% end %>
+  		</tbody>
+  	</table>
+  <!--content bar close-->			
+  </div>
+  <%= hidden_field_tag :source, "", :value=>"index" %>
+  <%= hidden_field_tag :page, "", :value=>"#{@page}" %>
+  <%= will_paginate @users if current_user.is_any_admin? %>
+<% end -%>

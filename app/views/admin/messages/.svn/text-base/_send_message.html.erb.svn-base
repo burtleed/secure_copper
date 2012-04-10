@@ -1,0 +1,22 @@
+<%= form_for :message, :action=>:index, :remote => true, :html => { :id => 'new-message-form' } do |f| %>
+<div class="chatbar">
+	<!--chatbar-->
+	<div class="dvchtbox">
+	<!--chat input-->
+		<%= f.text_area(:body, :class=> "inputchtbox") %>
+		<%= f.hidden_field(:sender_id, :value=>current_user.id, :name=>"message[sender_id]") %>
+      <%= f.hidden_field(:recepient_id, :value=> recepient_id, :name=>"message[recepient_ids][]") %>
+	<!--chat input close-->						
+	</div>
+	<div class="chtbtns">
+	<!--chat buttons-->
+		<%= image_submit_tag "/images/btn_send.png",:disabled => true,:id => "message_submit", :style => "width:110px;height:50px;" %>
+		<%= render :partial => "attachment"%>
+		<% files = current_user.temp_file_uploads.find(:all,:conditions=>["keyname= ?",session[:session_id]]) %>
+		<span id="attachment_count" style="float:left;"><%= files.size %></span> &nbsp;file
+		<span id="print_link" style="float:right;display:none;"><%= link_to "print", "#" %></span>
+	<!--chat buttons close-->						
+	</div>
+<!--chatbar close-->					
+</div>
+<% end %>

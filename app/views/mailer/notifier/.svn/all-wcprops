@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/securecopper/!svn/ver/152/app/views/mailer/notifier
+END
+send_password_to_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/securecopper/!svn/ver/152/app/views/mailer/notifier/send_password_to_user.html.erb
+END

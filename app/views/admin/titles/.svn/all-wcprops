@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/securecopper/!svn/ver/240/app/views/admin/titles
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/securecopper/!svn/ver/75/app/views/admin/titles/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/securecopper/!svn/ver/240/app/views/admin/titles/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/securecopper/!svn/ver/75/app/views/admin/titles/new.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/securecopper/!svn/ver/75/app/views/admin/titles/_form.html.erb
+END

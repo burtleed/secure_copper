@@ -1,0 +1,7 @@
+<% if @expire_setting.valid? %>
+	$('#fancybox-overlay').hide();
+	$('#fancybox-wrap').hide();
+	$('#fancybox-content').html("");
+<% else %>
+	$('#ex_error').html("<%=escape_javascript render :partial => "error_messages", :object => @expire_setting %>")
+<% end %>

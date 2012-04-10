@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/securecopper/!svn/ver/31/app/views/admin/roles
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/securecopper/!svn/ver/31/app/views/admin/roles/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/securecopper/!svn/ver/31/app/views/admin/roles/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/31/app/views/admin/roles/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/securecopper/!svn/ver/1/app/views/admin/roles/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/securecopper/!svn/ver/1/app/views/admin/roles/_form.html.erb
+END

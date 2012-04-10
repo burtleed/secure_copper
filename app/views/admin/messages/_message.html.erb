@@ -1,0 +1,9 @@
+<% unless message.sender_id == current_user.id %>
+	<%= render :partial=>"/admin/messages/message_user_details", :locals => {:message => message,:recepient_id => recepient_id,:recepient => recepient} %>
+	<%= render :partial=>"/admin/messages/message_details", :locals => {:message => message,:recepient_id => recepient_id,:recepient => recepient} %>
+<% else %>
+	<%= render :partial=>"/admin/messages/message_details", :locals => {:message => message,:recepient_id => recepient_id,:recepient => recepient} %>
+	<%= render :partial=>"/admin/messages/message_user_details", :locals => {:message => message,:recepient_id => recepient_id,:recepient => recepient} %>                        <table width="90%">
+<% end %>
+        	              
+        	              	

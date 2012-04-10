@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/securecopper/!svn/ver/7/vendor/plugins/dynamic_form/test
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/securecopper/!svn/ver/7/vendor/plugins/dynamic_form/test/test_helper.rb
+END
+dynamic_form_i18n_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/securecopper/!svn/ver/7/vendor/plugins/dynamic_form/test/dynamic_form_i18n_test.rb
+END
+dynamic_form_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/securecopper/!svn/ver/7/vendor/plugins/dynamic_form/test/dynamic_form_test.rb
+END

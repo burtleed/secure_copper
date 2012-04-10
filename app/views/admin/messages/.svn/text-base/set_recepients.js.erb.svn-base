@@ -1,0 +1,4 @@
+$('#fancybox-wrap').hide();
+$('#fancybox-overlay').hide();
+$('#message_recepient_emails').val('<%= @recepients.collect(&:email).join(',')%>')
+$('#message_recepient_ids').val('<%= @recepients.collect(&:id).join(',')%>')

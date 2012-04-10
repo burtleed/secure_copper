@@ -1,0 +1,46 @@
+<%=content_for :scripts do -%>
+	<%= javascript_include_tag 'message' %>
+<% end -%>
+
+<%= render :partial=>"/common/message_new", 
+  :locals=>{ 
+    :title=>"Messages: Send Message", :icon_class=>"icon-48-send-message", :model_name=>"admin_message"
+  } %>
+
+<%= form_for @message, :url =>  admin_messages_path,:html => {:method => "post", :multipart => true} do |f| %>
+<% if @message.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@message.errors.count, "error") %> prohibited this new information from being saved:</h2>
+    <ul>
+    <% @message.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div id="element-box">
+  <div class="m">
+    <div class="fltlft">
+      <div class="field">
+        <span class="star">*</span><%= f.label :recepient_ids, "Recepients" %>
+			 <%= f.text_field :recepient_emails,:disabled => true, :class=>"input_text"  %>
+    		 <%= f.hidden_field :recepient_ids, :value => @message.recepient_ids.join(',') %>
+    		 <%= link_to "Select User",set_recepients_admin_messages_url,:id => "select_user" %>
+      </div>
+      <div class="field">
+        <span class="star">*</span><%= f.label :message %>
+			<%= f.text_area :body,:style=>"height:90px;width:500px;" %>
+      </div>
+      <div class="field">
+      	<%= render :partial => "attachment"%>
+     	   <%= render :partial => "files_list" %>
+      </div>
+      <div class="actions hidden">
+        <%= hidden_field_tag "save_method", "", :value=>"apply" %>
+        <%= f.submit %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

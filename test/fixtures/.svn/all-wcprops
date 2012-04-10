@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/securecopper/!svn/ver/51/test/fixtures
+END
+users.yml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/securecopper/!svn/ver/1/test/fixtures/users.yml
+END
+hospital_titles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/securecopper/!svn/ver/50/test/fixtures/hospital_titles.yml
+END
+memberships.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/securecopper/!svn/ver/50/test/fixtures/memberships.yml
+END

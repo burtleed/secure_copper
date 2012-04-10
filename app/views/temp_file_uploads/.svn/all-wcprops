@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/securecopper/!svn/ver/142/app/views/temp_file_uploads
+END
+destroy_file.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/securecopper/!svn/ver/142/app/views/temp_file_uploads/destroy_file.js.erb
+END
+destroy.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/securecopper/!svn/ver/142/app/views/temp_file_uploads/destroy.js.erb
+END

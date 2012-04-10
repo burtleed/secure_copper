@@ -1,0 +1,9 @@
+<%= render :partial=>"/common/toolbox", 
+  :locals=>{ 
+    :title=>title, :icon_class=>icon_class, :model_name=>model_name, 
+    :allow_new=> allow_new,
+    :allow_edit=> allow_edit,:allow_activate=> allow_activate,
+    :allow_block=> allow_block,:allow_delete=> allow_delete,
+    :allow_save=>false,:allow_save_new=>false,:allow_cancel=>false,:allow_close=>false,
+    :allow_sendmessage => allow_sendmessage,:allow_settings => allow_settings,:allow_send => false
+  } %>
